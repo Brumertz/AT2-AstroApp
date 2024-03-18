@@ -70,6 +70,7 @@
             buttonSort.TabIndex = 3;
             buttonSort.Text = "Sort";
             buttonSort.UseVisualStyleBackColor = true;
+            buttonSort.Click += buttonSort_Click;
             // 
             // buttonSearch
             // 
@@ -79,6 +80,7 @@
             buttonSearch.TabIndex = 4;
             buttonSearch.Text = "Search";
             buttonSearch.UseVisualStyleBackColor = true;
+            buttonSearch.Click += buttonSearch_Click;
             // 
             // buttonEdit
             // 
@@ -88,6 +90,7 @@
             buttonEdit.TabIndex = 5;
             buttonEdit.Text = "Edit";
             buttonEdit.UseVisualStyleBackColor = true;
+            buttonEdit.Click += buttonEdit_Click;
             // 
             // buttonReset
             // 
@@ -97,6 +100,7 @@
             buttonReset.TabIndex = 6;
             buttonReset.Text = "Reset";
             buttonReset.UseVisualStyleBackColor = true;
+            buttonReset.Click += buttonReset_Click;
             // 
             // label1
             // 
@@ -122,6 +126,7 @@
             Controls.Add(labelAppName);
             Name = "MainForm";
             Text = "MainForm";
+            Load += MainForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }
