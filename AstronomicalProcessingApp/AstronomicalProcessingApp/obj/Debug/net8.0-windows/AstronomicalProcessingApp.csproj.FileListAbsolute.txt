@@ -1,0 +1,16 @@
+C:\Users\BrumertzTafe\OneDrive - TAFE\CVIV\Programming\C#\AT2\AT2-AstroApp\AstronomicalProcessingApp\AstronomicalProcessingApp\bin\Debug\net8.0-windows\AstronomicalProcessingApp.exe
+C:\Users\BrumertzTafe\OneDrive - TAFE\CVIV\Programming\C#\AT2\AT2-AstroApp\AstronomicalProcessingApp\AstronomicalProcessingApp\bin\Debug\net8.0-windows\AstronomicalProcessingApp.deps.json
+C:\Users\BrumertzTafe\OneDrive - TAFE\CVIV\Programming\C#\AT2\AT2-AstroApp\AstronomicalProcessingApp\AstronomicalProcessingApp\bin\Debug\net8.0-windows\AstronomicalProcessingApp.runtimeconfig.json
+C:\Users\BrumertzTafe\OneDrive - TAFE\CVIV\Programming\C#\AT2\AT2-AstroApp\AstronomicalProcessingApp\AstronomicalProcessingApp\bin\Debug\net8.0-windows\AstronomicalProcessingApp.dll
+C:\Users\BrumertzTafe\OneDrive - TAFE\CVIV\Programming\C#\AT2\AT2-AstroApp\AstronomicalProcessingApp\AstronomicalProcessingApp\bin\Debug\net8.0-windows\AstronomicalProcessingApp.pdb
+C:\Users\BrumertzTafe\OneDrive - TAFE\CVIV\Programming\C#\AT2\AT2-AstroApp\AstronomicalProcessingApp\AstronomicalProcessingApp\obj\Debug\net8.0-windows\AstronomicalProcessingApp.MainForm.resources
+C:\Users\BrumertzTafe\OneDrive - TAFE\CVIV\Programming\C#\AT2\AT2-AstroApp\AstronomicalProcessingApp\AstronomicalProcessingApp\obj\Debug\net8.0-windows\AstronomicalProcessingApp.csproj.GenerateResource.cache
+C:\Users\BrumertzTafe\OneDrive - TAFE\CVIV\Programming\C#\AT2\AT2-AstroApp\AstronomicalProcessingApp\AstronomicalProcessingApp\obj\Debug\net8.0-windows\AstronomicalProcessingApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\BrumertzTafe\OneDrive - TAFE\CVIV\Programming\C#\AT2\AT2-AstroApp\AstronomicalProcessingApp\AstronomicalProcessingApp\obj\Debug\net8.0-windows\AstronomicalProcessingApp.AssemblyInfoInputs.cache
+C:\Users\BrumertzTafe\OneDrive - TAFE\CVIV\Programming\C#\AT2\AT2-AstroApp\AstronomicalProcessingApp\AstronomicalProcessingApp\obj\Debug\net8.0-windows\AstronomicalProcessingApp.AssemblyInfo.cs
+C:\Users\BrumertzTafe\OneDrive - TAFE\CVIV\Programming\C#\AT2\AT2-AstroApp\AstronomicalProcessingApp\AstronomicalProcessingApp\obj\Debug\net8.0-windows\AstronomicalProcessingApp.csproj.CoreCompileInputs.cache
+C:\Users\BrumertzTafe\OneDrive - TAFE\CVIV\Programming\C#\AT2\AT2-AstroApp\AstronomicalProcessingApp\AstronomicalProcessingApp\obj\Debug\net8.0-windows\AstronomicalProcessingApp.dll
+C:\Users\BrumertzTafe\OneDrive - TAFE\CVIV\Programming\C#\AT2\AT2-AstroApp\AstronomicalProcessingApp\AstronomicalProcessingApp\obj\Debug\net8.0-windows\refint\AstronomicalProcessingApp.dll
+C:\Users\BrumertzTafe\OneDrive - TAFE\CVIV\Programming\C#\AT2\AT2-AstroApp\AstronomicalProcessingApp\AstronomicalProcessingApp\obj\Debug\net8.0-windows\AstronomicalProcessingApp.pdb
+C:\Users\BrumertzTafe\OneDrive - TAFE\CVIV\Programming\C#\AT2\AT2-AstroApp\AstronomicalProcessingApp\AstronomicalProcessingApp\obj\Debug\net8.0-windows\AstronomicalProcessingApp.genruntimeconfig.cache
+C:\Users\BrumertzTafe\OneDrive - TAFE\CVIV\Programming\C#\AT2\AT2-AstroApp\AstronomicalProcessingApp\AstronomicalProcessingApp\obj\Debug\net8.0-windows\ref\AstronomicalProcessingApp.dll
