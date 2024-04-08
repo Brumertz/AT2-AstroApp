@@ -6,10 +6,32 @@ namespace AstronomicalProcessingApp
 {
     public partial class MainForm : Form
     {
-        private int[] dataArray = new int[24]; // Array to store hourly neutrino interaction values
+        private struct HourlyData
+        {
+            public int Hour;
+            public int Interactions;
+
+            public HourlyData(int hour, int interactions)
+            {
+                Hour = hour;
+                Interactions = interactions;
+            }
+        }
+        private HourlyData[] dataArray = new HourlyData[24]; // Array to store hourly data
+
+       
         public MainForm()
         {
             InitializeComponent();
+        }
+        
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            labelAppName.Text = "Astronomical Processing";
+
+            GenerateRandomData(); // Initial generation of random data
+            UpdateListBox(); // Update list box with initial data
+
         }
         private void buttonSearch_Click(object sender, EventArgs e)
         {
@@ -25,7 +47,7 @@ namespace AstronomicalProcessingApp
                 if (index != -1)
                 {
                     listBoxData.SelectedIndex = index;
-                    MessageBox.Show($"Value {searchValue} found at hour {index + 1}");
+                    MessageBox.Show($"Value {searchValue} found at hour {dataArray[index].Hour}");
                 }
                 else
                 {
@@ -37,19 +59,13 @@ namespace AstronomicalProcessingApp
                 MessageBox.Show("Please enter a valid integer value to search.");
             }
         }
-        private void MainForm_Load(object sender, EventArgs e)
-        {
-            labelAppName.Text = "Astronomical Processing";
 
-            GenerateRandomData(); // Initial generation of random data
-            UpdateListBox(); // Update list box with initial data
-
-        }
 
         private void buttonSort_Click(object sender, EventArgs e)
         {
             UpdateListBox();
             BubbleSort(dataArray); // Sort the array using Bubble Sort
+            UpdateListBox(); // Update list box with sorted data
         }
 
 
@@ -58,7 +74,7 @@ namespace AstronomicalProcessingApp
         {
             if (listBoxData.SelectedIndex != -1 && int.TryParse(textBoxInput.Text, out int newValue))
             {
-                dataArray[listBoxData.SelectedIndex] = newValue;
+                dataArray[listBoxData.SelectedIndex].Interactions = newValue;
                 UpdateListBox();
             }
             else
@@ -71,10 +87,11 @@ namespace AstronomicalProcessingApp
         {
             GenerateRandomData(); // Generate new random data
             UpdateListBox(); // Update list box with new data
+            textBoxInput.Text = ""; // clear textBoxInput 
             
         }
 
-        private int BinarySearch(int[] array, int searchValue)
+        private int BinarySearch(HourlyData[] array, int searchValue)
         {
             int left = 0;
             int right = array.Length - 1;
@@ -83,12 +100,12 @@ namespace AstronomicalProcessingApp
             {
                 int mid = left + (right - left) / 2;
 
-                if (array[mid] == searchValue)
+                if (array[mid].Interactions == searchValue)
                 {
                     return mid; // Value found
                 }
 
-                if (array[mid] < searchValue)
+                if (array[mid].Interactions < searchValue)
                 {
                     left = mid + 1; // Search the right half
                 }
@@ -100,43 +117,45 @@ namespace AstronomicalProcessingApp
 
             return -1; // Value not found
         }
-       
-        private void UpdateListBox()
-        {
-            listBoxData.Items.Clear();
-            for (int i = 0; i < dataArray.Length; i++)
-            {
-                listBoxData.Items.Add($"Hour {i + 1}: {dataArray[i]} interactions");
-            }
-        }
         private void GenerateRandomData()
         {
             Random random = new Random();
             for (int i = 0; i < dataArray.Length; i++)
             {
-                dataArray[i] = random.Next(10, 91); // Random values between 10 and 90
+                dataArray[i] = new HourlyData(i + 1, random.Next(10, 91)); // Random values between 10 and 90
+            }
+
+        }
+
+        private void UpdateListBox()
+        {
+            listBoxData.Items.Clear();
+            foreach (HourlyData data in dataArray)
+            {
+                listBoxData.Items.Add($"Hour {data.Hour}: {data.Interactions} interactions");
             }
         }
 
-        private void BubbleSort(int[] array)
+
+
+
+        private void BubbleSort(HourlyData[] array)
         {
             int n = array.Length;
             for (int i = 0; i < n - 1; i++)
             {
                 for (int j = 0; j < n - i - 1; j++)
                 {
-                    if (array[j] > array[j + 1])
+                    if (array[j].Interactions > array[j + 1].Interactions)
                     {
                         // Swap elements
-                        int temp = array[j];
+                        HourlyData temp = array[j];
                         array[j] = array[j + 1];
                         array[j + 1] = temp;
                     }
                 }
             }
         }
-
-       
     }
 }
 
