@@ -8,24 +8,19 @@
     "net8.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\BrumertzTafe\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\30085204\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\BrumertzTafe\\OneDrive - TAFE\\CVIV\\Programming\\C#\\AT2\\AT2-AstroApp\\AT2-AstroApp\\AstronomicalProcessingApp\\AstronomicalProcessingApp\\AstronomicalProcessingApp.csproj",
+      "projectUniqueName": "C:\\Users\\30085204\\Documents\\30085204\\web class\\AT2-AstroApp\\AstronomicalProcessingApp\\AstronomicalProcessingApp\\AstronomicalProcessingApp.csproj",
       "projectName": "AstronomicalProcessingApp",
-      "projectPath": "C:\\Users\\BrumertzTafe\\OneDrive - TAFE\\CVIV\\Programming\\C#\\AT2\\AT2-AstroApp\\AT2-AstroApp\\AstronomicalProcessingApp\\AstronomicalProcessingApp\\AstronomicalProcessingApp.csproj",
-      "packagesPath": "C:\\Users\\BrumertzTafe\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\BrumertzTafe\\OneDrive - TAFE\\CVIV\\Programming\\C#\\AT2\\AT2-AstroApp\\AT2-AstroApp\\AstronomicalProcessingApp\\AstronomicalProcessingApp\\obj\\",
+      "projectPath": "C:\\Users\\30085204\\Documents\\30085204\\web class\\AT2-AstroApp\\AstronomicalProcessingApp\\AstronomicalProcessingApp\\AstronomicalProcessingApp.csproj",
+      "packagesPath": "C:\\Users\\30085204\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\30085204\\Documents\\30085204\\web class\\AT2-AstroApp\\AstronomicalProcessingApp\\AstronomicalProcessingApp\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\BrumertzTafe\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\30085204\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -33,7 +28,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

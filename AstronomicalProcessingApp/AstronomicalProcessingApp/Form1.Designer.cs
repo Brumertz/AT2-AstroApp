@@ -34,39 +34,44 @@
             buttonSort = new Button();
             buttonSearch = new Button();
             buttonEdit = new Button();
-            buttonReset = new Button();
+            buttonRefresh = new Button();
             label1 = new Label();
             SuspendLayout();
             // 
             // labelAppName
             // 
             labelAppName.AutoSize = true;
-            labelAppName.Location = new Point(40, 27);
+            labelAppName.Location = new Point(35, 20);
             labelAppName.Name = "labelAppName";
-            labelAppName.Size = new Size(195, 20);
+            labelAppName.Size = new Size(157, 15);
             labelAppName.TabIndex = 0;
             labelAppName.Text = "AstronomicalProcessingApp";
             // 
             // listBoxData
             // 
             listBoxData.FormattingEnabled = true;
-            listBoxData.Location = new Point(253, 109);
+            listBoxData.ItemHeight = 15;
+            listBoxData.Location = new Point(221, 82);
+            listBoxData.Margin = new Padding(3, 2, 3, 2);
             listBoxData.Name = "listBoxData";
-            listBoxData.Size = new Size(173, 264);
+            listBoxData.Size = new Size(152, 199);
             listBoxData.TabIndex = 1;
             // 
             // textBoxInput
             // 
-            textBoxInput.Location = new Point(40, 109);
+            textBoxInput.Location = new Point(35, 82);
+            textBoxInput.Margin = new Padding(3, 2, 3, 2);
             textBoxInput.Name = "textBoxInput";
-            textBoxInput.Size = new Size(193, 27);
+            textBoxInput.Size = new Size(169, 23);
             textBoxInput.TabIndex = 2;
+            
             // 
             // buttonSort
             // 
-            buttonSort.Location = new Point(44, 156);
+            buttonSort.Location = new Point(38, 117);
+            buttonSort.Margin = new Padding(3, 2, 3, 2);
             buttonSort.Name = "buttonSort";
-            buttonSort.Size = new Size(89, 46);
+            buttonSort.Size = new Size(78, 34);
             buttonSort.TabIndex = 3;
             buttonSort.Text = "Sort";
             buttonSort.UseVisualStyleBackColor = true;
@@ -74,9 +79,10 @@
             // 
             // buttonSearch
             // 
-            buttonSearch.Location = new Point(44, 208);
+            buttonSearch.Location = new Point(38, 156);
+            buttonSearch.Margin = new Padding(3, 2, 3, 2);
             buttonSearch.Name = "buttonSearch";
-            buttonSearch.Size = new Size(89, 46);
+            buttonSearch.Size = new Size(78, 34);
             buttonSearch.TabIndex = 4;
             buttonSearch.Text = "Search";
             buttonSearch.UseVisualStyleBackColor = true;
@@ -84,46 +90,49 @@
             // 
             // buttonEdit
             // 
-            buttonEdit.Location = new Point(44, 260);
+            buttonEdit.Location = new Point(38, 195);
+            buttonEdit.Margin = new Padding(3, 2, 3, 2);
             buttonEdit.Name = "buttonEdit";
-            buttonEdit.Size = new Size(89, 46);
+            buttonEdit.Size = new Size(78, 34);
             buttonEdit.TabIndex = 5;
             buttonEdit.Text = "Edit";
             buttonEdit.UseVisualStyleBackColor = true;
             buttonEdit.Click += buttonEdit_Click;
             // 
-            // buttonReset
+            // buttonRefresh
             // 
-            buttonReset.Location = new Point(44, 312);
-            buttonReset.Name = "buttonReset";
-            buttonReset.Size = new Size(89, 46);
-            buttonReset.TabIndex = 6;
-            buttonReset.Text = "Reset";
-            buttonReset.UseVisualStyleBackColor = true;
-            buttonReset.Click += buttonReset_Click;
+            buttonRefresh.Location = new Point(38, 234);
+            buttonRefresh.Margin = new Padding(3, 2, 3, 2);
+            buttonRefresh.Name = "buttonRefresh";
+            buttonRefresh.Size = new Size(78, 34);
+            buttonRefresh.TabIndex = 6;
+            buttonRefresh.Text = "Refresh";
+            buttonRefresh.UseVisualStyleBackColor = true;
+            buttonRefresh.Click += buttonReset_Click;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(40, 75);
+            label1.Location = new Point(35, 56);
             label1.Name = "label1";
-            label1.Size = new Size(97, 20);
+            label1.Size = new Size(79, 15);
             label1.TabIndex = 7;
             label1.Text = "InputNumber";
             // 
             // MainForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(493, 450);
+            ClientSize = new Size(431, 338);
             Controls.Add(label1);
-            Controls.Add(buttonReset);
+            Controls.Add(buttonRefresh);
             Controls.Add(buttonEdit);
             Controls.Add(buttonSearch);
             Controls.Add(buttonSort);
             Controls.Add(textBoxInput);
             Controls.Add(listBoxData);
             Controls.Add(labelAppName);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "MainForm";
             Text = "MainForm";
             Load += MainForm_Load;
@@ -139,7 +148,7 @@
         private Button buttonSort;
         private Button buttonSearch;
         private Button buttonEdit;
-        private Button buttonReset;
+        private Button buttonRefresh;
         private Label label1;
     }
 }

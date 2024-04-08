@@ -11,21 +11,6 @@ namespace AstronomicalProcessingApp
         {
             InitializeComponent();
         }
-
-        private void MainForm_Load(object sender, EventArgs e)
-        {
-            labelAppName.Text = "Astronomical Processing";
-
-            GenerateRandomData(); // Initial generation of random data
-            UpdateListBox(); // Update list box with initial data
-        }
-
-        private void buttonSort_Click(object sender, EventArgs e)
-        {
-            BubbleSort(dataArray); // Sort the array using Bubble Sort
-            UpdateListBox();
-        }
-
         private void buttonSearch_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(textBoxInput.Text))
@@ -52,6 +37,22 @@ namespace AstronomicalProcessingApp
                 MessageBox.Show("Please enter a valid integer value to search.");
             }
         }
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            labelAppName.Text = "Astronomical Processing";
+
+            GenerateRandomData(); // Initial generation of random data
+            UpdateListBox(); // Update list box with initial data
+
+        }
+
+        private void buttonSort_Click(object sender, EventArgs e)
+        {
+            UpdateListBox();
+            BubbleSort(dataArray); // Sort the array using Bubble Sort
+        }
+
+
 
         private void buttonEdit_Click(object sender, EventArgs e)
         {
@@ -70,41 +71,7 @@ namespace AstronomicalProcessingApp
         {
             GenerateRandomData(); // Generate new random data
             UpdateListBox(); // Update list box with new data
-        }
-        private void UpdateListBox()
-        {
-            listBoxData.Items.Clear();
-            for (int i = 0; i < dataArray.Length; i++)
-            {
-                listBoxData.Items.Add($"Hour {i + 1}: {dataArray[i]} interactions");
-            }
-        }
-
-        private void GenerateRandomData()
-        {
-            Random random = new Random();
-            for (int i = 0; i < dataArray.Length; i++)
-            {
-                dataArray[i] = random.Next(10, 91); // Random values between 10 and 90
-            }
-        }
-
-        private void BubbleSort(int[] array)
-        {
-            int n = array.Length;
-            for (int i = 0; i < n - 1; i++)
-            {
-                for (int j = 0; j < n - i - 1; j++)
-                {
-                    if (array[j] > array[j + 1])
-                    {
-                        // Swap elements
-                        int temp = array[j];
-                        array[j] = array[j + 1];
-                        array[j + 1] = temp;
-                    }
-                }
-            }
+            
         }
 
         private int BinarySearch(int[] array, int searchValue)
@@ -133,6 +100,43 @@ namespace AstronomicalProcessingApp
 
             return -1; // Value not found
         }
+       
+        private void UpdateListBox()
+        {
+            listBoxData.Items.Clear();
+            for (int i = 0; i < dataArray.Length; i++)
+            {
+                listBoxData.Items.Add($"Hour {i + 1}: {dataArray[i]} interactions");
+            }
+        }
+        private void GenerateRandomData()
+        {
+            Random random = new Random();
+            for (int i = 0; i < dataArray.Length; i++)
+            {
+                dataArray[i] = random.Next(10, 91); // Random values between 10 and 90
+            }
+        }
+
+        private void BubbleSort(int[] array)
+        {
+            int n = array.Length;
+            for (int i = 0; i < n - 1; i++)
+            {
+                for (int j = 0; j < n - i - 1; j++)
+                {
+                    if (array[j] > array[j + 1])
+                    {
+                        // Swap elements
+                        int temp = array[j];
+                        array[j] = array[j + 1];
+                        array[j + 1] = temp;
+                    }
+                }
+            }
+        }
+
+       
     }
 }
 
