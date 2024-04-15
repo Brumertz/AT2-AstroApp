@@ -1,6 +1,17 @@
+// Brandon Morales id 30085204 C., Sudaka Dev, Sprint Number
+// Date:15/04/2024
+// Version:1.01
+// Astronimical Processing
+// Brief explanation of the program : This program manages astronomical interaction data.
+//Inputs are user-entered values.
+//Processes involve random data generation, binary search, and bubble sort. Outputs include UI updates, search results, and sorted data display.
+// It efficiently organizes and presents astronomical data for analysis and interaction.
+
+
 using System;
 using System.Linq;
 using System.Windows.Forms;
+
 
 namespace AstronomicalProcessingApp
 {
@@ -59,17 +70,6 @@ namespace AstronomicalProcessingApp
                 MessageBox.Show("Please enter a valid integer value to search.");
             }
         }
-
-
-        private void buttonSort_Click(object sender, EventArgs e)
-        {
-            UpdateListBox();
-            BubbleSort(dataArray); // Sort the array using Bubble Sort
-            UpdateListBox(); // Update list box with sorted data
-        }
-
-
-
         private void buttonEdit_Click(object sender, EventArgs e)
         {
             if (listBoxData.SelectedIndex != -1 && int.TryParse(textBoxInput.Text, out int newValue))
@@ -89,6 +89,13 @@ namespace AstronomicalProcessingApp
             UpdateListBox(); // Update list box with new data
             textBoxInput.Text = ""; // clear textBoxInput 
             
+        }
+
+        private void buttonSort_Click(object sender, EventArgs e)
+        {
+            UpdateListBox();
+            BubbleSort(dataArray); // Sort the array using Bubble Sort
+            UpdateListBox(); // Update list box with sorted data
         }
 
         private int BinarySearch(HourlyData[] array, int searchValue)
@@ -115,8 +122,11 @@ namespace AstronomicalProcessingApp
                 }
             }
 
+
             return -1; // Value not found
         }
+        
+
         private void GenerateRandomData()
         {
             Random random = new Random();
