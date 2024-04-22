@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AstronomicalProcessingApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c14e24e9374fe6ea41bac68126181a3fdd5ff3c2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bb912ddd36a844b3b3a88f4a4cb47f5fe680bc68")]
 [assembly: System.Reflection.AssemblyProductAttribute("AstronomicalProcessingApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AstronomicalProcessingApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
