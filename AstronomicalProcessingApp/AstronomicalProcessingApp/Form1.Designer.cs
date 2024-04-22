@@ -56,6 +56,7 @@
             listBoxData.Name = "listBoxData";
             listBoxData.Size = new Size(152, 199);
             listBoxData.TabIndex = 1;
+            listBoxData.SelectedIndexChanged += listBoxData_SelectedIndexChanged;
             // 
             // textBoxInput
             // 
@@ -64,7 +65,6 @@
             textBoxInput.Name = "textBoxInput";
             textBoxInput.Size = new Size(169, 23);
             textBoxInput.TabIndex = 2;
-            
             // 
             // buttonSort
             // 

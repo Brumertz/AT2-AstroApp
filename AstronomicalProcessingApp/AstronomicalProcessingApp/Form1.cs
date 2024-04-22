@@ -11,6 +11,7 @@
 using System;
 using System.Linq;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 
 namespace AstronomicalProcessingApp
@@ -30,12 +31,12 @@ namespace AstronomicalProcessingApp
         }
         private HourlyData[] dataArray = new HourlyData[24]; // Array to store hourly data
 
-       
+
         public MainForm()
         {
             InitializeComponent();
         }
-        
+
         private void MainForm_Load(object sender, EventArgs e)
         {
             labelAppName.Text = "Astronomical Processing";
@@ -81,14 +82,16 @@ namespace AstronomicalProcessingApp
             {
                 MessageBox.Show("Please select an item in the list and enter a valid integer value to edit.");
             }
+            textBoxInput.Text = "";
+            MessageBox.Show("You have been changed the Interactions Number");
         }
 
         private void buttonReset_Click(object sender, EventArgs e)
         {
-            GenerateRandomData(); // Generate new random data
+             // Generate new random data
             UpdateListBox(); // Update list box with new data
             textBoxInput.Text = ""; // clear textBoxInput 
-            
+
         }
 
         private void buttonSort_Click(object sender, EventArgs e)
@@ -125,7 +128,7 @@ namespace AstronomicalProcessingApp
 
             return -1; // Value not found
         }
-        
+
 
         private void GenerateRandomData()
         {
@@ -166,7 +169,20 @@ namespace AstronomicalProcessingApp
                 }
             }
         }
+
+        private void listBoxData_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            if (listBoxData.SelectedIndex != -1)
+            {
+                string Interactions = listBoxData.SelectedItem.ToString();
+                string[] words = Interactions.Split(' ');
+                textBoxInput.Text = words[2];
+                
+            }
+        }
     }
+
 }
 
 
