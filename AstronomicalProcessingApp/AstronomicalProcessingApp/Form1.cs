@@ -80,7 +80,7 @@ namespace AstronomicalProcessingApp
             }
             else
             {
-                MessageBox.Show("Please select an item in the list and enter a valid integer value to edit.");
+                MessageBox.Show("Please select an item in the list an enter a valid integer value to edit.");
             }
             textBoxInput.Text = "";
             MessageBox.Show("You have been changed the Interactions Number");
