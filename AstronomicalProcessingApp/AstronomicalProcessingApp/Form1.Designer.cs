@@ -30,18 +30,28 @@
         {
             labelAppName = new Label();
             listBoxData = new ListBox();
-            textBoxInput = new TextBox();
             buttonSort = new Button();
             buttonSearch = new Button();
             buttonEdit = new Button();
             buttonRefresh = new Button();
             label1 = new Label();
+            buttonMidExtreme = new Button();
+            buttonMode = new Button();
+            buttonAverage = new Button();
+            buttonRange = new Button();
+            buttonSequentialsearch = new Button();
+            textBoxInput = new TextBox();
+            textBoxMidExtreme = new TextBox();
+            textBoxAverage = new TextBox();
+            textBoxMode = new TextBox();
+            textBoxRange = new TextBox();
+            textBoxSequencialSearch = new TextBox();
             SuspendLayout();
             // 
             // labelAppName
             // 
             labelAppName.AutoSize = true;
-            labelAppName.Location = new Point(35, 20);
+            labelAppName.Location = new Point(38, 52);
             labelAppName.Name = "labelAppName";
             labelAppName.Size = new Size(157, 15);
             labelAppName.TabIndex = 0;
@@ -51,24 +61,16 @@
             // 
             listBoxData.FormattingEnabled = true;
             listBoxData.ItemHeight = 15;
-            listBoxData.Location = new Point(221, 82);
+            listBoxData.Location = new Point(244, 102);
             listBoxData.Margin = new Padding(3, 2, 3, 2);
             listBoxData.Name = "listBoxData";
-            listBoxData.Size = new Size(152, 199);
+            listBoxData.Size = new Size(210, 304);
             listBoxData.TabIndex = 1;
             listBoxData.SelectedIndexChanged += listBoxData_SelectedIndexChanged;
             // 
-            // textBoxInput
-            // 
-            textBoxInput.Location = new Point(35, 82);
-            textBoxInput.Margin = new Padding(3, 2, 3, 2);
-            textBoxInput.Name = "textBoxInput";
-            textBoxInput.Size = new Size(169, 23);
-            textBoxInput.TabIndex = 2;
-            // 
             // buttonSort
             // 
-            buttonSort.Location = new Point(38, 117);
+            buttonSort.Location = new Point(501, 170);
             buttonSort.Margin = new Padding(3, 2, 3, 2);
             buttonSort.Name = "buttonSort";
             buttonSort.Size = new Size(78, 34);
@@ -79,18 +81,19 @@
             // 
             // buttonSearch
             // 
-            buttonSearch.Location = new Point(38, 156);
+            buttonSearch.Location = new Point(500, 431);
             buttonSearch.Margin = new Padding(3, 2, 3, 2);
             buttonSearch.Name = "buttonSearch";
             buttonSearch.Size = new Size(78, 34);
             buttonSearch.TabIndex = 4;
             buttonSearch.Text = "Search";
             buttonSearch.UseVisualStyleBackColor = true;
+            buttonSearch.Visible = false;
             buttonSearch.Click += buttonSearch_Click;
             // 
             // buttonEdit
             // 
-            buttonEdit.Location = new Point(38, 195);
+            buttonEdit.Location = new Point(501, 220);
             buttonEdit.Margin = new Padding(3, 2, 3, 2);
             buttonEdit.Name = "buttonEdit";
             buttonEdit.Size = new Size(78, 34);
@@ -101,10 +104,10 @@
             // 
             // buttonRefresh
             // 
-            buttonRefresh.Location = new Point(38, 234);
+            buttonRefresh.Location = new Point(501, 258);
             buttonRefresh.Margin = new Padding(3, 2, 3, 2);
             buttonRefresh.Name = "buttonRefresh";
-            buttonRefresh.Size = new Size(78, 34);
+            buttonRefresh.Size = new Size(78, 39);
             buttonRefresh.TabIndex = 6;
             buttonRefresh.Text = "Refresh";
             buttonRefresh.UseVisualStyleBackColor = true;
@@ -113,17 +116,121 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(35, 56);
+            label1.Location = new Point(500, 107);
             label1.Name = "label1";
             label1.Size = new Size(79, 15);
             label1.TabIndex = 7;
             label1.Text = "InputNumber";
             // 
+            // buttonMidExtreme
+            // 
+            buttonMidExtreme.Location = new Point(38, 160);
+            buttonMidExtreme.Name = "buttonMidExtreme";
+            buttonMidExtreme.Size = new Size(85, 44);
+            buttonMidExtreme.TabIndex = 8;
+            buttonMidExtreme.Text = "Mid-Extreme";
+            buttonMidExtreme.UseMnemonic = false;
+            buttonMidExtreme.UseVisualStyleBackColor = true;
+            buttonMidExtreme.Click += buttonMidExtreme_Click;
+            // 
+            // buttonMode
+            // 
+            buttonMode.Location = new Point(38, 280);
+            buttonMode.Name = "buttonMode";
+            buttonMode.Size = new Size(85, 46);
+            buttonMode.TabIndex = 9;
+            buttonMode.Text = "Mode";
+            buttonMode.UseVisualStyleBackColor = true;
+            buttonMode.Click += buttonMode_Click;
+            // 
+            // buttonAverage
+            // 
+            buttonAverage.Location = new Point(38, 220);
+            buttonAverage.Name = "buttonAverage";
+            buttonAverage.Size = new Size(85, 47);
+            buttonAverage.TabIndex = 10;
+            buttonAverage.Text = "Average";
+            buttonAverage.UseVisualStyleBackColor = true;
+            buttonAverage.Click += buttonAverage_Click;
+            // 
+            // buttonRange
+            // 
+            buttonRange.Location = new Point(38, 340);
+            buttonRange.Name = "buttonRange";
+            buttonRange.Size = new Size(85, 46);
+            buttonRange.TabIndex = 11;
+            buttonRange.Text = "Range";
+            buttonRange.UseVisualStyleBackColor = true;
+            buttonRange.Click += buttonRange_Click;
+            // 
+            // buttonSequentialsearch
+            // 
+            buttonSequentialsearch.Location = new Point(38, 99);
+            buttonSequentialsearch.Name = "buttonSequentialsearch";
+            buttonSequentialsearch.Size = new Size(85, 46);
+            buttonSequentialsearch.TabIndex = 12;
+            buttonSequentialsearch.Text = "Sequential Search";
+            buttonSequentialsearch.UseVisualStyleBackColor = true;
+            buttonSequentialsearch.Click += buttonSequentialsearch_Click;
+            // 
+            // textBoxInput
+            // 
+            textBoxInput.Location = new Point(501, 134);
+            textBoxInput.Margin = new Padding(3, 2, 3, 2);
+            textBoxInput.Name = "textBoxInput";
+            textBoxInput.Size = new Size(78, 23);
+            textBoxInput.TabIndex = 2;
+            // 
+            // textBoxMidExtreme
+            // 
+            textBoxMidExtreme.Location = new Point(158, 172);
+            textBoxMidExtreme.Name = "textBoxMidExtreme";
+            textBoxMidExtreme.Size = new Size(55, 23);
+            textBoxMidExtreme.TabIndex = 13;
+            // 
+            // textBoxAverage
+            // 
+            textBoxAverage.Location = new Point(158, 233);
+            textBoxAverage.Name = "textBoxAverage";
+            textBoxAverage.Size = new Size(55, 23);
+            textBoxAverage.TabIndex = 14;
+            // 
+            // textBoxMode
+            // 
+            textBoxMode.Location = new Point(158, 293);
+            textBoxMode.Name = "textBoxMode";
+            textBoxMode.Size = new Size(55, 23);
+            textBoxMode.TabIndex = 15;
+            // 
+            // textBoxRange
+            // 
+            textBoxRange.Location = new Point(158, 350);
+            textBoxRange.Name = "textBoxRange";
+            textBoxRange.Size = new Size(55, 23);
+            textBoxRange.TabIndex = 16;
+            // 
+            // textBoxSequencialSearch
+            // 
+            textBoxSequencialSearch.Location = new Point(158, 112);
+            textBoxSequencialSearch.Name = "textBoxSequencialSearch";
+            textBoxSequencialSearch.Size = new Size(55, 23);
+            textBoxSequencialSearch.TabIndex = 17;
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(431, 338);
+            ClientSize = new Size(601, 487);
+            Controls.Add(textBoxSequencialSearch);
+            Controls.Add(textBoxRange);
+            Controls.Add(textBoxMode);
+            Controls.Add(textBoxAverage);
+            Controls.Add(textBoxMidExtreme);
+            Controls.Add(buttonSequentialsearch);
+            Controls.Add(buttonRange);
+            Controls.Add(buttonAverage);
+            Controls.Add(buttonMode);
+            Controls.Add(buttonMidExtreme);
             Controls.Add(label1);
             Controls.Add(buttonRefresh);
             Controls.Add(buttonEdit);
@@ -144,11 +251,21 @@
 
         private Label labelAppName;
         private ListBox listBoxData;
-        private TextBox textBoxInput;
         private Button buttonSort;
         private Button buttonSearch;
         private Button buttonEdit;
         private Button buttonRefresh;
         private Label label1;
+        private Button buttonMidExtreme;
+        private Button buttonMode;
+        private Button buttonAverage;
+        private Button buttonRange;
+        private Button buttonSequentialsearch;
+        private TextBox textBoxInput;
+        private TextBox textBoxMidExtreme;
+        private TextBox textBoxAverage;
+        private TextBox textBoxMode;
+        private TextBox textBoxRange;
+        private TextBox textBoxSequencialSearch;
     }
 }

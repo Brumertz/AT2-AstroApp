@@ -35,6 +35,7 @@ namespace AstronomicalProcessingApp
         public MainForm()
         {
             InitializeComponent();
+
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -88,7 +89,7 @@ namespace AstronomicalProcessingApp
 
         private void buttonReset_Click(object sender, EventArgs e)
         {
-             // Generate new random data
+            // Generate new random data
             UpdateListBox(); // Update list box with new data
             textBoxInput.Text = ""; // clear textBoxInput 
 
@@ -178,7 +179,187 @@ namespace AstronomicalProcessingApp
                 string Interactions = listBoxData.SelectedItem.ToString();
                 string[] words = Interactions.Split(' ');
                 textBoxInput.Text = words[2];
-                
+
+            }
+        }
+        private double CalculateMidExtreme(HourlyData[] data)
+        {
+            if (data.Length == 0)
+            {
+                throw new ArgumentException("Data array cannot be empty.");
+            }
+
+            int minIndex = 0;
+            int maxIndex = 0;
+
+            for (int i = 1; i < data.Length; i++)
+            {
+                if (data[i].Interactions < data[minIndex].Interactions)
+                {
+                    minIndex = i;
+                }
+                else if (data[i].Interactions > data[maxIndex].Interactions)
+                {
+                    maxIndex = i;
+                }
+            }
+
+            return (data[minIndex].Interactions + data[maxIndex].Interactions) / 2.0;
+
+        }
+        private int FindMode(HourlyData[] data)
+        {
+            if (data.Length == 0)
+            {
+                throw new ArgumentException("Data array cannot be empty.");
+            }
+
+            int maxCount = 0;
+            int mode = data[0].Interactions;
+
+            for (int i = 0; i < data.Length; i++)
+            {
+                int count = 0;
+                for (int j = 0; j < data.Length; j++)
+                {
+                    if (data[i].Interactions == data[j].Interactions)
+                    {
+                        count++;
+                    }
+                }
+
+                if (count > maxCount)
+                {
+                    maxCount = count;
+                    mode = data[i].Interactions;
+                }
+            }
+
+            return mode;
+        }
+        private double CalculateAverage(HourlyData[] data)
+        {
+            if (data.Length == 0)
+            {
+                throw new ArgumentException("Data array cannot be empty.");
+            }
+
+            double total = 0.0;
+            foreach (HourlyData hourlyData in data)
+            {
+                total += hourlyData.Interactions;
+            }
+
+            return total / data.Length;
+        }
+        private int CalculateRange(HourlyData[] data)
+        {
+            if (data.Length == 0)
+            {
+                throw new ArgumentException("Data array cannot be empty.");
+            }
+
+            int min = data[0].Interactions;
+            int max = data[0].Interactions;
+
+            for (int i = 1; i < data.Length; i++)
+            {
+                min = Math.Min(min, data[i].Interactions);
+                max = Math.Max(max, data[i].Interactions);
+            }
+
+            return max - min;
+        }
+
+        private int SequentialSearch(HourlyData[] data, int searchValue)
+        {
+            for (int i = 0; i < data.Length; i++)
+            {
+                if (data[i].Interactions == searchValue)
+                {
+                    return i; // Found at index i
+                }
+            }
+
+            return -1; // Not found
+        }
+
+        private void buttonSequentialsearch_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(textBoxSequencialSearch.Text))
+            {
+                MessageBox.Show("Please enter a value to search.");
+                return;
+            }
+
+            if (int.TryParse(textBoxSequencialSearch.Text, out int searchValue))
+            {
+                int index = SequentialSearch(dataArray, searchValue);
+                if (index != -1)
+                {
+                    listBoxData.SelectedIndex = index;
+                    MessageBox.Show($"Value {searchValue} found at hour {dataArray[index].Hour}");
+                }
+                else
+                {
+                    MessageBox.Show($"Value {searchValue} not found in the data.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please enter a valid integer value to search.");
+            }
+        }
+        private void buttonMidExtreme_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                double midExtreme = CalculateMidExtreme(dataArray);
+                textBoxMidExtreme.Text = midExtreme.ToString("N2"); // Format with 2 decimal places
+            }
+            catch (ArgumentException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void buttonMode_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int mode = FindMode(dataArray);
+                textBoxMode.Text = mode.ToString();
+            }
+            catch (ArgumentException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void buttonAverage_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                double average = CalculateAverage(dataArray);
+                textBoxAverage.Text = average.ToString("N2"); // Format with 2 decimal places
+            }
+            catch (ArgumentException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void buttonRange_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int range = CalculateRange(dataArray);
+                textBoxRange.Text = range.ToString();
+            }
+            catch (ArgumentException ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
     }
