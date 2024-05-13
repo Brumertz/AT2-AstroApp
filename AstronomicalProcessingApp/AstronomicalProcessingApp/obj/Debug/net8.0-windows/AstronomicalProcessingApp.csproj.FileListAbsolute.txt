@@ -65,3 +65,4 @@ C:\Users\30085204\Documents\30085204\programminATs\AT2-AstroApp\AstronomicalProc
 C:\Users\30085204\Documents\30085204\programminATs\AT2-AstroApp\AstronomicalProcessingApp\AstronomicalProcessingApp\obj\Debug\net8.0-windows\AstronomicalProcessingApp.pdb
 C:\Users\30085204\Documents\30085204\programminATs\AT2-AstroApp\AstronomicalProcessingApp\AstronomicalProcessingApp\obj\Debug\net8.0-windows\AstronomicalProcessingApp.genruntimeconfig.cache
 C:\Users\30085204\Documents\30085204\programminATs\AT2-AstroApp\AstronomicalProcessingApp\AstronomicalProcessingApp\obj\Debug\net8.0-windows\ref\AstronomicalProcessingApp.dll
+C:\Users\30085204\Documents\30085204\programminATs\AT2-AstroApp\AstronomicalProcessingApp\AstronomicalProcessingApp\obj\Debug\net8.0-windows\AstronomicalProcessingApp.Properties.Resources.resources

@@ -48,6 +48,7 @@
             groupBox1 = new GroupBox();
             groupBox2 = new GroupBox();
             groupBox3 = new GroupBox();
+            labelAppName = new Label();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox3.SuspendLayout();
@@ -57,16 +58,16 @@
             // 
             listBoxData.FormattingEnabled = true;
             listBoxData.ItemHeight = 15;
-            listBoxData.Location = new Point(236, 70);
+            listBoxData.Location = new Point(236, 63);
             listBoxData.Margin = new Padding(3, 2, 3, 2);
             listBoxData.Name = "listBoxData";
-            listBoxData.Size = new Size(227, 349);
+            listBoxData.Size = new Size(235, 364);
             listBoxData.TabIndex = 1;
             listBoxData.SelectedIndexChanged += listBoxData_SelectedIndexChanged;
             // 
             // buttonSort
             // 
-            buttonSort.Location = new Point(7, 88);
+            buttonSort.Location = new Point(21, 92);
             buttonSort.Margin = new Padding(3, 2, 3, 2);
             buttonSort.Name = "buttonSort";
             buttonSort.Size = new Size(78, 34);
@@ -77,7 +78,7 @@
             // 
             // buttonSearch
             // 
-            buttonSearch.Location = new Point(7, 219);
+            buttonSearch.Location = new Point(21, 223);
             buttonSearch.Margin = new Padding(3, 2, 3, 2);
             buttonSearch.Name = "buttonSearch";
             buttonSearch.Size = new Size(78, 34);
@@ -89,7 +90,7 @@
             // 
             // buttonEdit
             // 
-            buttonEdit.Location = new Point(7, 138);
+            buttonEdit.Location = new Point(21, 135);
             buttonEdit.Margin = new Padding(3, 2, 3, 2);
             buttonEdit.Name = "buttonEdit";
             buttonEdit.Size = new Size(78, 34);
@@ -100,7 +101,7 @@
             // 
             // buttonRefresh
             // 
-            buttonRefresh.Location = new Point(7, 176);
+            buttonRefresh.Location = new Point(21, 176);
             buttonRefresh.Margin = new Padding(3, 2, 3, 2);
             buttonRefresh.Name = "buttonRefresh";
             buttonRefresh.Size = new Size(78, 39);
@@ -112,9 +113,10 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(6, 25);
+            label1.Font = new Font("Segoe UI", 10F);
+            label1.Location = new Point(19, 33);
             label1.Name = "label1";
-            label1.Size = new Size(79, 15);
+            label1.Size = new Size(92, 19);
             label1.TabIndex = 7;
             label1.Text = "InputNumber";
             // 
@@ -171,45 +173,45 @@
             // 
             // textBoxInput
             // 
-            textBoxInput.Location = new Point(7, 52);
+            textBoxInput.Location = new Point(21, 56);
             textBoxInput.Margin = new Padding(3, 2, 3, 2);
             textBoxInput.Name = "textBoxInput";
-            textBoxInput.Size = new Size(78, 23);
+            textBoxInput.Size = new Size(78, 25);
             textBoxInput.TabIndex = 2;
             // 
             // textBoxMidExtreme
             // 
             textBoxMidExtreme.Location = new Point(133, 99);
             textBoxMidExtreme.Name = "textBoxMidExtreme";
-            textBoxMidExtreme.Size = new Size(55, 23);
+            textBoxMidExtreme.Size = new Size(55, 25);
             textBoxMidExtreme.TabIndex = 13;
             // 
             // textBoxAverage
             // 
             textBoxAverage.Location = new Point(133, 160);
             textBoxAverage.Name = "textBoxAverage";
-            textBoxAverage.Size = new Size(55, 23);
+            textBoxAverage.Size = new Size(55, 25);
             textBoxAverage.TabIndex = 14;
             // 
             // textBoxMode
             // 
             textBoxMode.Location = new Point(133, 220);
             textBoxMode.Name = "textBoxMode";
-            textBoxMode.Size = new Size(55, 23);
+            textBoxMode.Size = new Size(55, 25);
             textBoxMode.TabIndex = 15;
             // 
             // textBoxRange
             // 
             textBoxRange.Location = new Point(133, 277);
             textBoxRange.Name = "textBoxRange";
-            textBoxRange.Size = new Size(55, 23);
+            textBoxRange.Size = new Size(55, 25);
             textBoxRange.TabIndex = 16;
             // 
             // textBoxSequencialSearch
             // 
             textBoxSequencialSearch.Location = new Point(133, 39);
             textBoxSequencialSearch.Name = "textBoxSequencialSearch";
-            textBoxSequencialSearch.Size = new Size(55, 23);
+            textBoxSequencialSearch.Size = new Size(55, 25);
             textBoxSequencialSearch.TabIndex = 17;
             // 
             // groupBox1
@@ -224,6 +226,7 @@
             groupBox1.Controls.Add(buttonAverage);
             groupBox1.Controls.Add(buttonMode);
             groupBox1.Controls.Add(buttonMidExtreme);
+            groupBox1.Font = new Font("Segoe UI", 10F);
             groupBox1.Location = new Point(9, 70);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(208, 349);
@@ -233,36 +236,49 @@
             // 
             // groupBox2
             // 
+            groupBox2.BackColor = SystemColors.Control;
             groupBox2.Controls.Add(label1);
             groupBox2.Controls.Add(buttonRefresh);
             groupBox2.Controls.Add(buttonEdit);
             groupBox2.Controls.Add(buttonSearch);
             groupBox2.Controls.Add(buttonSort);
             groupBox2.Controls.Add(textBoxInput);
-            groupBox2.Location = new Point(501, 103);
+            groupBox2.Font = new Font("Segoe UI", 10F);
+            groupBox2.Location = new Point(496, 96);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(104, 267);
+            groupBox2.Size = new Size(126, 274);
             groupBox2.TabIndex = 19;
             groupBox2.TabStop = false;
-            groupBox2.Text = "groupBox2";
+            groupBox2.Text = "InteractionsData";
             // 
             // groupBox3
             // 
+            groupBox3.Controls.Add(labelAppName);
             groupBox3.Controls.Add(groupBox2);
             groupBox3.Controls.Add(groupBox1);
             groupBox3.Controls.Add(listBoxData);
-            groupBox3.Location = new Point(21, 32);
+            groupBox3.Location = new Point(10, 12);
             groupBox3.Name = "groupBox3";
             groupBox3.Size = new Size(652, 461);
             groupBox3.TabIndex = 20;
             groupBox3.TabStop = false;
             groupBox3.Text = "AstronomicalProcessingApp";
             // 
+            // labelAppName
+            // 
+            labelAppName.AutoSize = true;
+            labelAppName.Font = new Font("Segoe UI", 11F);
+            labelAppName.Location = new Point(9, 0);
+            labelAppName.Name = "labelAppName";
+            labelAppName.Size = new Size(195, 20);
+            labelAppName.TabIndex = 20;
+            labelAppName.Text = "AstronomicalProcessingApp";
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(701, 567);
+            ClientSize = new Size(674, 481);
             Controls.Add(groupBox3);
             Margin = new Padding(3, 2, 3, 2);
             Name = "MainForm";
@@ -273,6 +289,7 @@
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
             groupBox3.ResumeLayout(false);
+            groupBox3.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -297,5 +314,6 @@
         private GroupBox groupBox1;
         private GroupBox groupBox2;
         private GroupBox groupBox3;
+        private Label labelAppName;
     }
 }
