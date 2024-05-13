@@ -1,6 +1,6 @@
 // Brandon Morales id 30085204 C., Sudaka Dev, Sprint Number
 // Date:15/04/2024
-// Version:1.01
+// Version:2.0
 // Astronimical Processing
 // Brief explanation of the program : This program manages astronomical interaction data.
 //Inputs are user-entered values.
