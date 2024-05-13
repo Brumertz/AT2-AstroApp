@@ -171,17 +171,20 @@ namespace AstronomicalProcessingApp
             }
         }
 
+       
+
         private void listBoxData_SelectedIndexChanged(object sender, EventArgs e)
         {
 
             if (listBoxData.SelectedIndex != -1)
             {
-                string Interactions = listBoxData.SelectedItem.ToString();
-                string[] words = Interactions.Split(' ');
-                textBoxInput.Text = words[2];
+                string? interactions = listBoxData.SelectedItem?.ToString();
+                string[]? words = interactions?.Split(' ');
+                textBoxInput.Text = words?[2];
 
             }
         }
+        // Math Methods
         private double CalculateMidExtreme(HourlyData[] data)
         {
             if (data.Length == 0)
